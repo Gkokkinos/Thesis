@@ -1,0 +1,30 @@
+[
+	{
+		"Name": "0",
+		"ActorName": "BP-Door_C",
+		"ActionMapped": "Interact",
+		"Ignore": false,
+		"Desire": 1
+	},
+	{
+		"Name": "1",
+		"ActorName": "BP-Statue_C",
+		"ActionMapped": "Interact",
+		"Ignore": false,
+		"Desire": 0
+	},
+	{
+		"Name": "2",
+		"ActorName": "BP-TriggerBox_C",
+		"ActionMapped": "Wait",
+		"Ignore": false,
+		"Desire": 0
+	},
+	{
+		"Name": "3",
+		"ActorName": "AICharacter_C",
+		"ActionMapped": "Shoot",
+		"Ignore": false,
+		"Desire": 1
+	}
+]

@@ -32,6 +32,6 @@
 		"ActorName": "BP-TestShout_C",
 		"ActionMapped": "Wait",
 		"Ignore": false,
-		"Desire": 10
+		"Desire": 100
 	}
 ]

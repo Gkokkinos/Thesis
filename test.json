@@ -33,5 +33,12 @@
 		"ActionMapped": "Wait",
 		"Ignore": false,
 		"Desire": 100
+	},
+	{
+		"Name": "5",
+		"ActorName": "BP-TestShoutReward_C",
+		"ActionMapped": "Wait",
+		"Ignore": false,
+		"Desire": 1000
 	}
 ]

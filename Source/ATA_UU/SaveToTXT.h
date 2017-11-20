@@ -3,38 +3,30 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "FileHelper.h"
+#include "PlatformFilemanager.h"
+#include "SavedStatesQ.h"
 #include "GameFramework/Actor.h"
-#include "QLearning.generated.h"
-
-
+#include "SaveToTXT.generated.h"
 
 UCLASS()
-class ATA_UU_API AQLearning : public AActor
+class ATA_UU_API ASaveToTXT : public AActor
 {
 	GENERATED_BODY()
 	
 public:	
 	// Sets default values for this actor's properties
-	AQLearning();
-
-	//generic variables
-	UPROPERTY()
-	float gamma;
-	int iterations;
-	int qSize;
-
-	UFUNCTION(BlueprintCallable, Category = "Something")
-	static void DoSomething();
-	
+	ASaveToTXT();
 
 protected:
 	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+	
 
 public:	
 	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
 	
+
+	UFUNCTION(BlueprintCallable, Category = "Export")
+	static void SaveMatrixToText(TArray<FStateAndActions> test);
 	
 };

@@ -26,3 +26,8 @@ void AQLearning::Tick(float DeltaTime)
 
 }
 
+void AQLearning:: DoSomething()
+{
+	
+}
+

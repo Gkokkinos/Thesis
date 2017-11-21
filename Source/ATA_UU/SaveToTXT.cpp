@@ -36,10 +36,15 @@ void ASaveToTXT::SaveMatrixToText(TArray<FStateAndActions> test)
 		// for each element write to .sav
 		for (int i = 0; i < test.Num(); i++)
 		{
-			//FFileHelper::SaveArrayToFile(test[i].actionArray, *AbsoluteFilePath);
-			FFileHelper::SaveStringToFile(test[i].stateName, *AbsoluteFilePath, FFileHelper::EEncodingOptions::AutoDetect, &FileManager,EFileWrite::FILEWRITE_Append);
 			
-			//FFileHelper::SaveStringToFile(test[i].stateName, *AbsoluteFilePath);
+			FFileHelper::SaveStringToFile(test[i].stateName + "\n", *AbsoluteFilePath, FFileHelper::EEncodingOptions::AutoDetect, &FileManager,EFileWrite::FILEWRITE_Append);
+			for (int j = 0; j < test[i].actionArray.Num(); j++)
+			{
+				FFileHelper::SaveStringToFile(FString::FromInt(test[i].actionArray[j]) + ",", *AbsoluteFilePath, FFileHelper::EEncodingOptions::AutoDetect, &FileManager, EFileWrite::FILEWRITE_Append);
+			}
+
+			FFileHelper::SaveStringToFile( "\n", *AbsoluteFilePath, FFileHelper::EEncodingOptions::AutoDetect, &FileManager, EFileWrite::FILEWRITE_Append);
+			
 		}
 		
 	}

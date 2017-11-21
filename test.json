@@ -4,14 +4,14 @@
 		"ActorName": "BP-Door_C",
 		"ActionMapped": "Interact",
 		"Ignore": false,
-		"Desire": 0
+		"Desire": 0.6
 	},
 	{
 		"Name": "1",
 		"ActorName": "BP-Statue_C",
 		"ActionMapped": "Interact",
 		"Ignore": false,
-		"Desire": 1
+		"Desire": 0.3
 	},
 	{
 		"Name": "2",

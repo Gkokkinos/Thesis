@@ -22,7 +22,7 @@ struct FStateAndActions
 	GENERATED_USTRUCT_BODY()
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Basic)
-	TArray<uint8> actionArray;
+	TArray<int32> actionArray;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Basic)
 	FString stateName;

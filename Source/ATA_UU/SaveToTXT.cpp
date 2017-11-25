@@ -16,6 +16,7 @@ ASaveToTXT::ASaveToTXT()
 void ASaveToTXT::SaveMatrixToText(TArray<FStateAndActions> test)
 {
 	FString SaveDirectory = FString("C:/Users/lalai/Documents/GitHub/Thesis");
+	//"C:/Users/lalai/Documents/Visual Studio 2015/Projects/QLearningExample/QLearningExample"
 	FString FileName = FString("MyFileName.sav");
 	FString TextToSave = FString("Lorem ipsum");
 	bool AllowOverwriting = false;

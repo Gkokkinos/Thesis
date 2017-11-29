@@ -15,10 +15,10 @@ ASaveToTXT::ASaveToTXT()
 
 void ASaveToTXT::SaveMatrixToText(TArray<FStateAndActions> test)
 {
-	FString SaveDirectory = FString("C:/Users/lalai/Documents/GitHub/Thesis");
-	//"C:/Users/lalai/Documents/Visual Studio 2015/Projects/QLearningExample/QLearningExample"
+	FString SaveDirectory = FString("C:/Users/lalai/Documents/Visual Studio 2015/Projects/QLearningAlgorithm/QLearningAlgorithm");
+	//C:/Users/lalai/Documents/Visual Studio 2015/Projects/QLearningAlgorithm/QLearningAlgorithm
+	//"C:/Users/lalai/Documents/GitHub/Thesis"
 	FString FileName = FString("MyFileName.sav");
-	FString TextToSave = FString("Lorem ipsum");
 	bool AllowOverwriting = false;
 
 	IPlatformFile& PlatformFile = FPlatformFileManager::Get().GetPlatformFile();
@@ -33,19 +33,17 @@ void ASaveToTXT::SaveMatrixToText(TArray<FStateAndActions> test)
 	{
 		// Get absolute file path
 		FString AbsoluteFilePath = SaveDirectory + "/" + FileName;
-
+		//delete previous content
+		FFileHelper::SaveStringToFile("", *AbsoluteFilePath);
 		// for each element write to .sav
 		for (int i = 0; i < test.Num(); i++)
 		{
-			
 			FFileHelper::SaveStringToFile(test[i].stateName + "\n", *AbsoluteFilePath, FFileHelper::EEncodingOptions::AutoDetect, &FileManager,EFileWrite::FILEWRITE_Append);
 			for (int j = 0; j < test[i].actionArray.Num(); j++)
 			{
 				FFileHelper::SaveStringToFile(FString::FromInt(test[i].actionArray[j]) + ",", *AbsoluteFilePath, FFileHelper::EEncodingOptions::AutoDetect, &FileManager, EFileWrite::FILEWRITE_Append);
 			}
-
 			FFileHelper::SaveStringToFile( "\n", *AbsoluteFilePath, FFileHelper::EEncodingOptions::AutoDetect, &FileManager, EFileWrite::FILEWRITE_Append);
-			
 		}
 		
 	}

@@ -25,10 +25,6 @@
 		{
 			"Name": "SteamVR",
 			"Enabled": false
-		},
-		{
-			"Name": "GoogleVRController",
-			"Enabled": true
 		}
 	]
 }
